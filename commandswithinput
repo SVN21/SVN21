@@ -1,0 +1,64 @@
+Assignment1:-
+--1st terminal --
+javac Search.java
+javac SearchQuery.java
+rmic SearchQuery
+rmiregistry &
+javac Server.java
+java Server
+
+--2nd terminal--
+javac Client.java
+java Client
+i/p:- write anything as o/p
+
+
+Assignment2:-
+--1st terminal--
+idlj -fall Calc.idl
+javac -Xlint:none *.java CalcApp/*.java
+orbd -ORBInitialPort 1050&
+
+--2nd terminal--
+javac CalcServer.java
+java CalcServer -ORBInitialPort 1050&
+
+--3rd terminal--
+javac CalcClient.java
+java CalcClient -ORBInitialPort 1050
+i/p:- do calculations
+
+Assignment3
+--1st terminal--
+mpicc hello.c -o hello
+mpirun -np 4 ./hello
+
+mpicc send_recv.c -o send_recv
+mpirun -np 2 ./send_recv
+
+mpicc sum_array.c -o sum_array
+mpirun -np 4 ./sum_array
+no input
+
+Assignment4
+--1st terminal--
+javac BerkeleyClockSync.java
+java BerkeleyClockSync 
+i/p:- 10 12 13 11 14
+
+Assignment5
+--1st terminal--
+javac tokenring.java
+java tokenring
+i/p:-3  1  2  4  1  2  3  5  0
+
+Assignment6
+--1st terminal--
+javac Ring.java
+java Ring
+i/p:-5  1  2  3  4  5  1  3  2
+
+--2nd terminal--
+javac Bully.java
+java Bully
+i/p:-1  3  2  1  3  4
