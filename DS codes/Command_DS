@@ -1,0 +1,53 @@
+Assignment1
+
+javac Search.java
+javac SearchQuery.java
+rmic SearchQuery
+rmiregistry &
+javac Server.java
+java Server
+
+javac Client.java
+java Client
+
+
+Assignment2
+idlj -fall Calc.idl
+javac -Xlint:none *.java CalcApp/*.java
+orbd -ORBInitialPort 1050&
+
+javac CalcServer.java
+java CalcServer -ORBInitialPort 1050&
+
+javac CalcClient.java
+java CalcClient -ORBInitialPort 1050
+
+
+Assignment3
+mpicc hello.c -o hello
+mpirun -np 4 ./hello
+
+mpicc send_recv.c -o send_recv
+mpirun -np 2 ./send_recv
+
+mpicc sum_array.c -o sum_array
+mpirun -np 4 ./sum_array
+
+Assignment4
+javac BerkeleyClockSync.java
+java BerkeleyClockSync 
+
+
+Assignment5
+javac tokenring.java
+java tokenring
+
+
+Assignment6
+javac Ring.java
+java Ring
+
+javac Bully.java
+java Bully
+
+
